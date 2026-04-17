@@ -1,33 +1,36 @@
 package pages;
 
+import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Page;
 
 public class FramePage {
 
-    private Page page;
+    private final Page page;
+
+    // XPath locate từng iframe theo attribute src (không dùng index)
+    private static final String IFRAME_1 = "//h2[text()='Iframe 1']/following-sibling::iframe[1]";
+    private static final String IFRAME_2 = "//h2[text()='Iframe 2']/following-sibling::iframe[1]";
+
+    // XPath link bên trong iframe
+    private static final String SELENIUM_TUTORIAL_LINK = "//a[normalize-space()='Selenium Tutorial']";
 
     public FramePage(Page page) {
         this.page = page;
     }
-    private String url = "https://www.tutorialspoint.com/selenium/practice/frames.php";
+    public Page clickSeleniumTutorialInFrame(String iframeXpath) {
+        FrameLocator frame = page.frameLocator(iframeXpath);
 
-    public void navigate() {
-        page.navigate(url);
-    }
-
-    public Page clickInFrame1() {
-        return page.waitForPopup(() -> {
-            page.frameLocator("(//iframe[@src='new-tab-sample.php'])[1]")
-                    .locator("(//a[normalize-space()='Selenium Tutorial'])")
-                    .click();
+        Page newTab = page.waitForPopup(() -> {
+            frame.locator(SELENIUM_TUTORIAL_LINK).click();
         });
-    }
-    public Page clickInFrame2() {
-        return page.waitForPopup(() -> {
-            page.frameLocator("(//iframe[@src='new-tab-sample.php'])[2]")
-                    .locator("(//a[normalize-space()='Selenium Tutorial'])")
-                    .click();
-        });
+        return newTab;
     }
 
+    public Page clickInIframe1() {
+        return clickSeleniumTutorialInFrame(IFRAME_1);
+    }
+
+    public Page clickInIframe2() {
+        return clickSeleniumTutorialInFrame(IFRAME_2);
+    }
 }

@@ -1,28 +1,36 @@
 package tests;
 
 import base.BaseTest;
-import com.microsoft.playwright.Page;
+import constants.URLs;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.FramePage;
+import com.microsoft.playwright.Page;
 
 public class FrameTest extends BaseTest {
 
     @Test
-    public void testFrame1() {
+    public void clickSeleniumTutorialInIframe1() {
+        page.navigate(URLs.FRAME);
         FramePage framePage = new FramePage(page);
-        framePage.navigate();
-        Page newTab = framePage.clickInFrame1();
-        Assert.assertNotNull(newTab);
-        Assert.assertTrue(newTab.url().contains("selenium"));
-    }
-    @Test
-    public void testFrame2(){
-        FramePage framePage = new FramePage(page);
-        framePage.navigate();
-        Page newTab = framePage.clickInFrame2();
-        Assert.assertNotNull(newTab);
-        Assert.assertTrue(newTab.url().contains("selenium"));
+
+        Page newTab = framePage.clickInIframe1();
+
+        Assert.assertEquals(newTab.url(),"https://www.tutorialspoint.com/selenium/index.htm");
+        newTab.close();
     }
 
+    @Test
+    public void clickSeleniumTutorialInIframe2() {
+        page.navigate(URLs.FRAME);
+        FramePage framePage = new FramePage(page);
+
+        // Click link trong Iframe 2
+        Page newTab = framePage.clickInIframe2();
+
+        // Verify new tab được mở (URL chứa "selenium")
+        Assert.assertEquals(newTab.url(), "https://www.tutorialspoint.com/selenium/index.htm");
+
+        newTab.close();
+    }
 }
