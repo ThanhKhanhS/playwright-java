@@ -24,12 +24,13 @@ public class FormTest extends BaseTest {
         data.put("Date of Birth:", "2000-10-10");
         data.put("Current Address:", "Quy Nhon");
         data.put("Gender:", "Male");
+        data.put("Subjects:", "Math");
         data.put("Hobbies:", "Sports");
         data.put("state", "NCR");
         data.put("city", "Agra");
-
-        // Action
-        formPage.fillForm(data);
+        data.put("Picture:", "src/test/java/data/anh.png");
+        formPage.fillStudentRegistrationForm(data);
+        page.waitForTimeout(10_000);
         formPage.submit();
     }
 }
