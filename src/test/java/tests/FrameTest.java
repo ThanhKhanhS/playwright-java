@@ -25,10 +25,8 @@ public class FrameTest extends BaseTest {
         page.navigate(URLs.FRAME);
         FramePage framePage = new FramePage(page);
 
-        // Click link trong Iframe 2
         Page newTab = framePage.clickInIframe2();
 
-        // Verify new tab được mở (URL chứa "selenium")
         Assert.assertEquals(newTab.url(), "https://www.tutorialspoint.com/selenium/index.htm");
 
         newTab.close();
