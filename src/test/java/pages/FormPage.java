@@ -1,47 +1,74 @@
 package pages;
 
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.SelectOption;
+import java.util.Map;
+import java.io.File;
 
-import java.nio.file.Paths;
-import java.util.Locale;
-
-public class FormPage {
-    private Page page;
+public class FormPage extends BasePage {
 
     public FormPage(Page page) {
-        this.page = page;
+        super(page);
     }
 
-    public void navigate() {
-        page.navigate("https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php");
+    private String textField(String label) {
+        return String.format("//label[text()='%s']/following-sibling::div/input | //label[text()='%s']/following-sibling::div/textarea", label, label);
     }
 
-    public void fillForm() {
-        page.locator("//label[text()='Name:']/following-sibling::div/input").fill("Khanh");
-        page.locator("//label[text()='Email:']/following-sibling::div/input").fill("test@gmail.com");
-        page.locator("//input[@id='gender']").check();
-        page.locator("//label[text()='Mobile(10 Digits):']/following-sibling::div/input").fill("0123456789");
+    private String radioOrCheckbox(String label, String value) {
+        return String.format("//label[text()='%s']/following::div//label[text()='%s']", label, value);
+    }
 
-        page.locator("//label[text()='Date of Birth:']/following-sibling::div/input").fill("1998-10-10");
+    private String dropdown(String id) {
+        return String.format("//select[@id='%s']", id);
+    }
 
-        page.locator("//label[text()='Subjects:']/following-sibling::div/input").fill("Math");
+    private String fileUploadField(String label) {
+        return String.format("//label[text()='%s']/following-sibling::div//input[@type='file']", label);
+    }
 
-        Locator checkboxes = page.locator("(//input[@type='checkbox'])");
-        for (int i = 0; i < checkboxes.count(); i++) {
-            checkboxes.nth(i).check();
+    // ===== BUSINESS LOGIC =====
+
+    public void fillForm(Map<String, String> data) {
+
+        for (Map.Entry<String, String> entry : data.entrySet()) {
+
+            String key = entry.getKey();
+            String value = entry.getValue();
+
+            // Text fields (input hoặc textarea, loại trừ file)
+            if (page.locator(textField(key)).count() > 0) {
+                fill(textField(key), value);
+            }
+
+            // Radio / Checkbox
+            else if (page.locator(radioOrCheckbox(key, value)).count() > 0) {
+                click(radioOrCheckbox(key, value));
+            }
+
+            // Dropdown - sử dụng selectOption như yêu cầu
+            else if (page.locator(dropdown(key)).count() > 0) {
+                page.selectOption(dropdown(key),value);
+            }
         }
-
-        page.locator("//input[@id='picture']").setInputFiles(Paths.get("C:/Users/khanh/OneDrive/Pictures/Screenshots 1/anh.png"));
-
-        page.locator("//textarea[@id='picture']").fill("12 Science Avenue");
-
-        page.locator("//select[@id='state']").selectOption("NCR");
-
-        page.locator("//select[@id='city']").selectOption("Agra");
     }
 
     public void submit() {
-        page.locator("//input[@value='Login']").click();
+        click("//input[@type='submit']");
+    }
+
+    // ===== METHOD RIÊNG ĐỂ UPLOAD (theo yêu cầu) =====
+    public void uploadFile(String label, String filePath) {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            throw new RuntimeException("File không tồn tại: " + filePath);
+        }
+
+        String xpath = fileUploadField(label);
+        if (page.locator(xpath).count() > 0) {
+            upload(xpath, filePath);   // tái sử dụng method từ BasePage
+        } else {
+            throw new RuntimeException("Không tìm thấy trường upload file cho label: " + label);
+        }
     }
 }
