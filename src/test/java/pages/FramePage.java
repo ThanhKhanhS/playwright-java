@@ -7,11 +7,9 @@ public class FramePage {
 
     private final Page page;
 
-    // XPath locate từng iframe theo attribute src (không dùng index)
     private static final String IFRAME_1 = "//h2[text()='Iframe 1']/following-sibling::iframe[1]";
     private static final String IFRAME_2 = "//h2[text()='Iframe 2']/following-sibling::iframe[1]";
 
-    // XPath link bên trong iframe
     private static final String SELENIUM_TUTORIAL_LINK = "//a[normalize-space()='Selenium Tutorial']";
 
     public FramePage(Page page) {
