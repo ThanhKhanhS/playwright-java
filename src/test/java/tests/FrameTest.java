@@ -1,10 +1,10 @@
 package tests;
 
-import base.BaseTest;
+import org.example.base.BaseTest;
 import constants.URLs;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.FramePage;
+import org.example.pages.FramePage;
 import com.microsoft.playwright.Page;
 
 public class FrameTest extends BaseTest {
