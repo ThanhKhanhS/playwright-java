@@ -1,6 +1,7 @@
 package pages;
 
 import com.microsoft.playwright.FrameLocator;
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
@@ -8,17 +9,16 @@ public class NestedFramePage {
 
     private final Page page;
 
-    private static final String PARENT_IFRAME = "//iframe[@id='parent_iframe']";
-    private static final String CHILD_IFRAME  = "//iframe[@id='iframe1']";
+    private static final String PARENT_IFRAME  = "//iframe[@id='parent_iframe']";
+    private static final String CHILD_IFRAME   = "//iframe[@id='iframe1']";
 
     private static final String CLICK_HERE_BTN = "//button[normalize-space()='Click Here']";
-    private static final String HEADER_TEXT   = "//br/preceding-sibling::h4";
-    private static final String SUCCESS_MSG      = "//p[@id='processing']";
+    private static final String HEADER_TEXT    = "//br/preceding-sibling::h4";
+    private static final String SUCCESS_MSG    = "//p[@id='processing']";
 
     public NestedFramePage(Page page) {
         this.page = page;
     }
-
 
     private FrameLocator parentFrame() {
         return page.frameLocator(PARENT_IFRAME);
@@ -43,12 +43,14 @@ public class NestedFramePage {
         return childFrame().locator(HEADER_TEXT).innerText().trim();
     }
     public String getParentSuccessMessage() {
-        parentFrame().locator(SUCCESS_MSG).waitFor(new com.microsoft.playwright.Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-        return parentFrame().locator(SUCCESS_MSG).innerText().trim();
+        Locator msg = parentFrame().locator(SUCCESS_MSG);
+        msg.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        return msg.innerText();
     }
 
     public String getChildSuccessMessage() {
-        childFrame().locator(SUCCESS_MSG).waitFor(new com.microsoft.playwright.Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-        return childFrame().locator(SUCCESS_MSG).innerText().trim();
+        Locator msg = parentFrame().locator(SUCCESS_MSG);
+        msg.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        return msg.innerText();
     }
 }
