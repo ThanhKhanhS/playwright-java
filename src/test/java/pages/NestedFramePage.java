@@ -2,61 +2,53 @@ package pages;
 
 import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitForSelectorState;
 
 public class NestedFramePage {
 
     private final Page page;
 
-    // ===== IFRAME LOCATOR =====
+    private static final String PARENT_IFRAME = "//iframe[@id='parent_iframe']";
+    private static final String CHILD_IFRAME  = "//iframe[@id='iframe1']";
 
-    // Trang này có 2 iframe → dùng index
-    private FrameLocator outerFrame() {
-        return page.frameLocator("//iframe[@id='parent_iframe']");
-    }
-
-    private FrameLocator innerFrame() {
-        return outerFrame().frameLocator("//iframe[@id='iframe1']");
-    }
-
-    // ===== ELEMENT =====
-
-    private static final String CLICK_HERE_BTN = "//button[text()='Click Here']";
-
-    private static final String BODY = "//body";
+    private static final String CLICK_HERE_BTN = "//button[normalize-space()='Click Here']";
+    private static final String HEADER_TEXT   = "//br/preceding-sibling::h4";
+    private static final String SUCCESS_MSG      = "//p[@id='processing']";
 
     public NestedFramePage(Page page) {
         this.page = page;
     }
 
-    // ===== ACTION =====
 
-    // Click button trong CHILD frame (deep nhất)
-    public void clickChildButton() {
-        innerFrame()
-                .locator(CLICK_HERE_BTN)
-                .click();
+    private FrameLocator parentFrame() {
+        return page.frameLocator(PARENT_IFRAME);
     }
 
-    // (optional) click parent button
-    public void clickParentButton() {
-        outerFrame()
-                .locator(CLICK_HERE_BTN)
-                .click();
+    private FrameLocator childFrame() {
+        return parentFrame().frameLocator(CHILD_IFRAME);
     }
 
-    // ===== GET TEXT =====
-
-    public String getOuterFrameText() {
-        return outerFrame()
-                .locator(BODY)
-                .innerText()
-                .trim();
+    public void clickInParentFrame() {
+        parentFrame().locator(CLICK_HERE_BTN).first().click();
     }
 
-    public String getInnerFrameText() {
-        return innerFrame()
-                .locator(BODY)
-                .innerText()
-                .trim();
+    public void clickInChildFrame() {
+        childFrame().locator(CLICK_HERE_BTN).click();
+    }
+
+    public String getParentHeaderText() {
+        return parentFrame().locator(HEADER_TEXT).innerText().trim();
+    }
+    public String getChildHeaderText() {
+        return childFrame().locator(HEADER_TEXT).innerText().trim();
+    }
+    public String getParentSuccessMessage() {
+        parentFrame().locator(SUCCESS_MSG).waitFor(new com.microsoft.playwright.Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        return parentFrame().locator(SUCCESS_MSG).innerText().trim();
+    }
+
+    public String getChildSuccessMessage() {
+        childFrame().locator(SUCCESS_MSG).waitFor(new com.microsoft.playwright.Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        return childFrame().locator(SUCCESS_MSG).innerText().trim();
     }
 }
