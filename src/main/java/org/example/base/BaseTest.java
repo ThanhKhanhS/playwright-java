@@ -5,6 +5,7 @@ import org.testng.annotations.*;
 
 public class BaseTest {
     protected Playwright playwright;
+    protected BrowserContext context;
     protected Browser browser;
     protected Page page;
 
@@ -12,11 +13,13 @@ public class BaseTest {
     public void setup() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        page = browser.newPage();
+        context = browser.newContext();
+        page = context.newPage();
     }
 
     @AfterMethod
     public void teardown() {
+        context.close();
         browser.close();
         playwright.close();
     }

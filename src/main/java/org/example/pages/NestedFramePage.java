@@ -1,5 +1,4 @@
-package pages;
-
+package org.example.pages;
 import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
@@ -49,7 +48,7 @@ public class NestedFramePage {
     }
 
     public String getChildSuccessMessage() {
-        Locator msg = parentFrame().locator(SUCCESS_MSG);
+        Locator msg = childFrame().locator(SUCCESS_MSG);
         msg.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
         return msg.innerText();
     }

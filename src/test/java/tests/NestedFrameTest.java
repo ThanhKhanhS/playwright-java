@@ -1,5 +1,5 @@
 package tests;
-
+import org.example.pages.NestedFramePage;
 import base.BaseTest;
 import constants.URLs;
 import org.testng.Assert;
@@ -7,12 +7,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class NestedFrameTest extends BaseTest {
-    private pages.NestedFramePage nestedFramePage;
+    private NestedFramePage nestedFramePage;
 
     @BeforeMethod
     public void setupTest() {
         page.navigate(URLs.NESTED_FRAME);
-        nestedFramePage = new pages.NestedFramePage(page);
+        nestedFramePage = new NestedFramePage(page);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class NestedFrameTest extends BaseTest {
         nestedFramePage.clickInParentFrame();
 
         String successMsg = nestedFramePage.getParentSuccessMessage();
-        Assert.assertEquals(successMsg,"You clicked the button from iframe 1",
+        Assert.assertEquals(successMsg,"Hooray..! You clicked the button from iframe 1",
                 "The message displayed is incorrect");
     }
 
@@ -36,7 +36,7 @@ public class NestedFrameTest extends BaseTest {
         nestedFramePage.clickInChildFrame();
 
         String successMsg = nestedFramePage.getChildSuccessMessage();
-        Assert.assertEquals(successMsg,"You clicked the button from iframe 2",
+        Assert.assertEquals(successMsg,"Hooray..! You clicked the button from iframe 2",
                 "The message displayed is incorrect");
     }
 }
