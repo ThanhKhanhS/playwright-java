@@ -14,11 +14,11 @@ public class FormPage extends BasePage {
     }
 
     private String textField(String label) {
-        return String.format("//label[contains(text(),'%s')]/following-sibling::div/*[self::input or self::textarea]", label);
+        return String.format("//label[normalize-space(text())='%s:']/following-sibling::div/*[self::input or self::textarea]", label);
     }
 
     private String radioOrCheckbox(String label, String value) {
-        return String.format("//label[contains(text(),'%s')]/following-sibling::div//label[text()='%s']/preceding-sibling::input", label, value);
+        return String.format("//label[normalize-space(text())='%s:']/following-sibling::div//label[text()='%s']/preceding-sibling::input", label, value);
     }
 
     private String dropdown(String id) {
@@ -26,7 +26,7 @@ public class FormPage extends BasePage {
     }
 
     private String fileUploadField(String label) {
-        return String.format("//label[contains(text(),'%s')]/following-sibling::div//input[@type='file']", label);
+        return String.format("//label[normalize-space(text())='%s:']/following-sibling::div//input[@type='file']", label);
     }
 
     public void uploadFile(String label, String filePath) {
