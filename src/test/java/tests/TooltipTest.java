@@ -2,7 +2,7 @@ package tests;
 
 import constants.URLs;
 import org.example.base.BaseTest;
-import org.example.base.TooltipPage;
+import org.example.pages.TooltipPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
