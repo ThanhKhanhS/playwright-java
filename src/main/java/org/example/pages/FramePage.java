@@ -7,7 +7,7 @@ public class FramePage {
 
     private final Page page;
     private static final String SELENIUM_TUTORIAL_LINK = "//a[normalize-space()='Selenium Tutorial']";
-    private static final String iframeXpath = "//h2[contains(text(),'%s')]/following-sibling::iframe[1]";
+    private static final String iframeXpath = "//h2[text()='%s']/following-sibling::iframe[1]";
     public FramePage(Page page) {
         this.page = page;
     }
