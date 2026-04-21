@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite" parallel="classes" thread-count="3">
+
+    <parameter name="browser" value="chromium"/>
+
+    <test name="UI Tests">
+        <classes>
+            <class name="tests.ColorTest"/>
+        </classes>
+    </test>
+
+</suite>
