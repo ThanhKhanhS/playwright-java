@@ -2,6 +2,7 @@ package tests;
 
 import org.example.base.BaseTest;
 import constants.URLs;
+import org.example.pages.NavigationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.example.pages.FramePage;
@@ -11,7 +12,10 @@ public class FrameTest extends BaseTest {
 
     @Test
     public void clickSeleniumTutorialInIframe1() {
-        page.navigate(URLs.FRAME);
+        page.navigate(URLs.INDEX);
+        NavigationPage navigationPage = new NavigationPage(page);
+        navigationPage.navigateTo("Alerts, Frames & Windows","Frames");
+
         FramePage framePage = new FramePage(page);
 
         Page newTab = framePage.clickInIframe1();
@@ -22,7 +26,10 @@ public class FrameTest extends BaseTest {
 
     @Test
     public void clickSeleniumTutorialInIframe2() {
-        page.navigate(URLs.FRAME);
+        page.navigate(URLs.INDEX);
+        NavigationPage navigationPage = new NavigationPage(page);
+        navigationPage.navigateTo("Alerts, Frames & Windows","Frames");
+
         FramePage framePage = new FramePage(page);
 
         Page newTab = framePage.clickInIframe2();
