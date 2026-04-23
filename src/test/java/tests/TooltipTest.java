@@ -2,6 +2,7 @@ package tests;
 
 import constants.URLs;
 import org.example.base.BaseTest;
+import org.example.pages.NavigationPage;
 import org.example.pages.TooltipPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -12,7 +13,9 @@ public class TooltipTest extends BaseTest {
 
     @BeforeMethod
     public void setupTest() {
-        page.navigate(URLs.TOOLTIP);
+        page.navigate(URLs.Home_Page);
+        NavigationPage navigationPage = new NavigationPage(page);
+        navigationPage.navigateTo("Widgets", "Tool Tips");
         tooltipPage = new TooltipPage(page);
     }
 
