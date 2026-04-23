@@ -1,12 +1,12 @@
-package base;
+package org.example.base;
 
 import com.microsoft.playwright.*;
 import org.testng.annotations.*;
 
 public class BaseTest {
     protected Playwright playwright;
-    protected BrowserContext context;
     protected Browser browser;
+    protected BrowserContext context;
     protected Page page;
 
     @BeforeMethod

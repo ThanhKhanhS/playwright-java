@@ -1,6 +1,6 @@
 package tests;
 import org.example.pages.NestedFramePage;
-import base.BaseTest;
+import org.example.base.BaseTest;
 import constants.URLs;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
