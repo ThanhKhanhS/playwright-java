@@ -2,9 +2,7 @@
 
 <suite name="Regression Suite" parallel="classes" thread-count="3">
 
-    <parameter name="browser" value="chromium"/>
-
-    <test name="UI Tests">
+    <test name="Frame Tests">
         <classes>
             <class name="tests.FrameTest"/>
         </classes>

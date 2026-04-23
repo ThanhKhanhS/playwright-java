@@ -12,7 +12,7 @@ public class FrameTest extends BaseTest {
 
     @Test
     public void clickSeleniumTutorialInIframe1() {
-        page.navigate(URLs.INDEX);
+        page.navigate(URLs.Home_Page);
         NavigationPage navigationPage = new NavigationPage(page);
         navigationPage.navigateTo("Alerts, Frames & Windows","Frames");
 
@@ -26,7 +26,7 @@ public class FrameTest extends BaseTest {
 
     @Test
     public void clickSeleniumTutorialInIframe2() {
-        page.navigate(URLs.INDEX);
+        page.navigate(URLs.Home_Page);
         NavigationPage navigationPage = new NavigationPage(page);
         navigationPage.navigateTo("Alerts, Frames & Windows","Frames");
 
