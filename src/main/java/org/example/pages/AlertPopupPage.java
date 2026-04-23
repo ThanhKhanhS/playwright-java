@@ -6,7 +6,7 @@ public class AlertPopupPage {
     private final Page page;
 
     private static final String Alert_btn  = "//button[@id='%s']";
-    private static final String Win_new_btn = "//button[contains(text(),'%s')]";
+    private static final String Win_new_btn = "//button[text()='%s']";
 
     public AlertPopupPage(Page page) {
         this.page = page;

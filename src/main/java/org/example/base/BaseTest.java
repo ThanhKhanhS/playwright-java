@@ -1,6 +1,7 @@
 package org.example.base;
 
 import com.microsoft.playwright.*;
+import org.testng.annotations.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
