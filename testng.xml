@@ -2,12 +2,26 @@
 
 <suite name="Regression Suite" parallel="classes" thread-count="3">
 
-    <parameter name="browser" value="chromium"/>
+    <test name="Form Test">
+        <classes>
+            <class name="tests.FormTest"/>
+        </classes>
+    </test>
+    <test name="Frame Tests">
+        <classes>
+            <class name="tests.FrameTest"/>
+        </classes>
+    </test>
 
-    <test name="UI Tests">
+    <test name="Nested Frame Tests">
+        <classes>
+            <class name="tests.NestedFrameTest"/>
+        </classes>
+    </test>
+
+    <test name="Broken Link Tests">
         <classes>
             <class name="tests.BrokenLinkTest"/>
         </classes>
     </test>
-
 </suite>
