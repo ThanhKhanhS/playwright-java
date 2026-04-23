@@ -2,6 +2,7 @@ package tests;
 
 import constants.URLs;
 import org.example.base.BaseTest;
+import org.example.pages.NavigationPage;
 import org.example.pages.UploadDownloadPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +16,9 @@ public class UploadDownloadTest extends BaseTest {
 
     @Test
     public void TC01_uploadFile(){
-        page.navigate(URLs.UploadDownload);
+        page.navigate(URLs.Home_Page);
+        NavigationPage navigationPage = new NavigationPage(page);
+        navigationPage.navigateTo("Elements", "Upload and Download");
         UploadDownloadPage uploadDownloadPage = new UploadDownloadPage(page);
         String filePath = System.getProperty("user.dir") + File.separator + "src/test/java/resources/testdata/anh.png";
         uploadDownloadPage.uploadFiles("uploadFile",filePath);
@@ -23,7 +26,9 @@ public class UploadDownloadTest extends BaseTest {
 
     @Test
     public void TC02_downloadFile(){
-        page.navigate(URLs.UploadDownload);
+        page.navigate(URLs.Home_Page);
+        NavigationPage navigationPage = new NavigationPage(page);
+        navigationPage.navigateTo("Elements", "Upload and Download");
         UploadDownloadPage uploadDownloadPage = new UploadDownloadPage(page);
 
         Path downloadedFile = uploadDownloadPage.downloadFile("Download",Download_dir);
