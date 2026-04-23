@@ -12,4 +12,7 @@ public class URLs {
 
     public static final String NESTED_FRAME =
             "https://www.dezlearn.com/nested-iframes-example/";
+
+    public static final String DROPDOWN =
+            "https://www.tutorialspoint.com/selenium/practice/select-menu.php";
 }
