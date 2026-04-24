@@ -12,4 +12,10 @@ public class URLs {
 
     public static final String NESTED_FRAME =
             "https://www.dezlearn.com/nested-iframes-example/";
+
+    public static final String Key_Press =
+            "https://practice.expandtesting.com/key-presses";
+
+    public static final String Expand_Testing_Home =
+            "https://practice.expandtesting.com/";
 }
