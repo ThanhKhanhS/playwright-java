@@ -2,6 +2,23 @@
 
 <suite name="Regression Suite" parallel="classes" thread-count="3">
 
+    <test name="Form Test">
+        <classes>
+            <class name="tests.FormTest"/>
+        </classes>
+    </test>
+    <test name="Frame Tests">
+        <classes>
+            <class name="tests.FrameTest"/>
+        </classes>
+    </test>
+
+    <test name="Nested Frame Tests">
+        <classes>
+            <class name="tests.NestedFrameTest"/>
+        </classes>
+    </test>
+
     <test name="Login Test">
         <classes>
             <class name="tests.LoginTest"/>

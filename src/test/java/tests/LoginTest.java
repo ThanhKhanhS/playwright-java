@@ -2,6 +2,7 @@ package tests;
 
 import constants.URLs;
 import org.example.base.BaseTest;
+import org.example.pages.ExpandTestingNavigationPage;
 import org.example.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +15,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void TC01_loginSuccessfully(){
-        page.navigate(URLs.LOGIN);
+        page.navigate(URLs.Expand_Testing_Home);
+        new ExpandTestingNavigationPage(page).navigateTo("Test Login Page");
+
         LoginPage loginPage = new LoginPage(page);
 
         loginPage.login(Valid_Username,Valid_Password);
@@ -29,7 +32,8 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void TC02_loginWithInvalidUsername(){
-        page.navigate(URLs.LOGIN);
+        page.navigate(URLs.Expand_Testing_Home);
+        new ExpandTestingNavigationPage(page).navigateTo("Test Login Page");
         LoginPage loginPage = new LoginPage(page);
 
         loginPage.login(Invalid_Username, Valid_Password);
@@ -42,7 +46,8 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void TC03_loginWithInvalidPassword(){
-        page.navigate(URLs.LOGIN);
+        page.navigate(URLs.Expand_Testing_Home);
+        new ExpandTestingNavigationPage(page).navigateTo("Test Login Page");
         LoginPage loginPage = new LoginPage(page);
 
         loginPage.login(Valid_Username, Invalid_Password);
