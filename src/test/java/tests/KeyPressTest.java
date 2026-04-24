@@ -2,6 +2,7 @@ package tests;
 
 import constants.URLs;
 import org.example.base.BaseTest;
+import org.example.pages.ExpandTestingNavigationPage;
 import org.example.pages.KeyPressPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,7 +14,9 @@ public class KeyPressTest extends BaseTest {
 
     @Test
     public void TC01_pressKeyAndVerifyResult(){
-        page.navigate(URLs.Key_Press);
+        page.navigate(URLs.Expand_Testing_Home);
+        new ExpandTestingNavigationPage(page).navigateTo("Key Presses");
+
         KeyPressPage keyPressPage = new KeyPressPage(page);
 
         Map<String, String> testData = new LinkedHashMap<>();
