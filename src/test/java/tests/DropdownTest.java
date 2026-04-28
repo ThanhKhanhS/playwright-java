@@ -21,9 +21,9 @@ public class DropdownTest extends BaseTest {
         navigationPage.navigateTo("Widgets", "Select Menu");
 
         dropdownPage = new DropdownPage(page);
-        String inputId = "demo-multiple-select-input";
-        List<String> items = Arrays.asList("Books","Movies, Music & Games","Electronics & Computers","Home, Garden & Tools");
-        dropdownPage.selectMultipleOptions(inputId,items);
+        String multiSelectSectionLabel = "Multiselect drop down";
+        List<String> items = Arrays.asList("Books","Movies, Music & Games","Electronics & Computers");
+        dropdownPage.selectMultipleOptions(multiSelectSectionLabel,items);
     }
 
     @Test
@@ -33,8 +33,8 @@ public class DropdownTest extends BaseTest {
         navigationPage.navigateTo("Widgets", "Select Menu");
 
         dropdownPage = new DropdownPage(page);
-        String selectId = "inputGroupSelect03";
-        dropdownPage.selectOneOption(selectId, "Mr.");
+        String selectSectionLabel = "Select One";
+        dropdownPage.selectOneOption(selectSectionLabel, "Mr.");
     }
 
 }
