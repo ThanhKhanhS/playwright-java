@@ -21,7 +21,7 @@ public class UploadDownloadTest extends BaseTest {
         navigationPage.navigateTo("Elements", "Upload and Download");
         UploadDownloadPage uploadDownloadPage = new UploadDownloadPage(page);
         String filePath = System.getProperty("user.dir") + File.separator + "src/test/java/resources/testdata/anh.png";
-        uploadDownloadPage.uploadFiles("uploadFile",filePath);
+        uploadDownloadPage.uploadFiles(filePath);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class UploadDownloadTest extends BaseTest {
         navigationPage.navigateTo("Elements", "Upload and Download");
         UploadDownloadPage uploadDownloadPage = new UploadDownloadPage(page);
 
-        Path downloadedFile = uploadDownloadPage.downloadFile("Download",Download_dir);
+        Path downloadedFile = uploadDownloadPage.downloadFile(Download_dir);
 
         File file = downloadedFile.toFile();
         Assert.assertTrue(file.exists());

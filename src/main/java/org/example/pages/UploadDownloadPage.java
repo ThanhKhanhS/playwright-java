@@ -9,26 +9,24 @@ import java.nio.file.Paths;
 public class UploadDownloadPage {
     private final Page page;
 
-    private static final String Upload_Btn   = "//input[@id='%s']";
-    private static final String Download_Btn = "//a[normalize-space()='%s']";
+    private static final String Upload_Btn   = "//input[@id='uploadFile']";
+    private static final String Download_Btn = "//a[normalize-space()='Download']";
 
     public UploadDownloadPage(Page page){
         this.page = page;
     }
 
-    public void uploadFiles(String uploadId, String filePath) {
+    public void uploadFiles(String filePath) {
         File file = new File(filePath);
         if (!file.exists()) {
             throw new RuntimeException("File does not exist " + filePath);
         }
-        String xpath = String.format(Upload_Btn, uploadId);
-        page.setInputFiles(xpath, Paths.get(filePath));
+        page.setInputFiles(Upload_Btn, Paths.get(filePath));
     }
 
-    public Path downloadFile(String inputText, String saveDir) {
-        String xpath = String.format(Download_Btn,inputText);
+    public Path downloadFile(String saveDir) {
         Download download = page.waitForDownload(() -> {
-            page.click(xpath);
+            page.click(Download_Btn);
         });
 
         Path savePath = Paths.get(saveDir, download.suggestedFilename());
