@@ -19,4 +19,10 @@
         </classes>
     </test>
 
+    <test name="Basic Auth Tests">
+        <classes>
+            <class name="tests.BasicAuthTest"/>
+        </classes>
+    </test>
+
 </suite>
