@@ -5,6 +5,7 @@ import org.example.base.BaseTest;
 import org.example.pages.ExpandTestingNavigationPage;
 import org.example.pages.LoginPage;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
@@ -55,6 +56,19 @@ public class LoginTest extends BaseTest {
         String errorMsg = loginPage.getErrorMessage();
         Assert.assertEquals(errorMsg,"Your password is invalid!");
 
+        Assert.assertFalse(loginPage.isOnSecurePage());
+    }
+
+    @Test
+    public void TC04_loginWithoutUsernameAndPassword(){
+        page.navigate(URLs.Expand_Testing_Home);
+        new ExpandTestingNavigationPage(page).navigateTo("Test Login Page");
+        LoginPage loginPage = new LoginPage(page);
+
+        loginPage.login("","");
+
+        String errorMsg = loginPage.getErrorMessage();
+        Assert.assertEquals(errorMsg,"Your username is invalid!");
         Assert.assertFalse(loginPage.isOnSecurePage());
     }
 }
