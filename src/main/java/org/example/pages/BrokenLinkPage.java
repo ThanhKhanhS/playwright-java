@@ -1,8 +1,9 @@
 package org.example.pages;
 
 import com.microsoft.playwright.Page;
-
+import com.microsoft.playwright.Locator;
 import java.util.List;
+import java.util.ArrayList;
 
 public class BrokenLinkPage {
     private final Page page;
@@ -14,10 +15,15 @@ public class BrokenLinkPage {
     }
 
     public List<String> getAllBrokenLinkUrl() {
-        return page.locator(Broken_Link).all()
-                .stream()
-                .map(locator -> locator.getAttribute("href"))
-                .toList();
+        List<String> urls = new ArrayList<>();
+        List<Locator> links = page.locator(Broken_Link).all();
+        for(int i = 0; i < links.size(); i++) {
+            String href = links.get(i).getAttribute("href");
+            if (href != null) {
+                urls.add(href);
+            }
+        }
+        return urls;
     }
 
     public boolean isBrokenLink(String url){

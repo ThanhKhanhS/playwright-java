@@ -5,7 +5,9 @@ import org.example.base.BaseTest;
 import org.example.pages.BrokenLinkPage;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.List;
+import org.testng.Assert;
 
 public class BrokenLinkTest extends BaseTest {
 
@@ -15,13 +17,16 @@ public class BrokenLinkTest extends BaseTest {
         BrokenLinkPage brokenLinkPage = new BrokenLinkPage(page);
 
         List<String> urls = brokenLinkPage.getAllBrokenLinkUrl();
-        System.out.println("Total link: " + urls.size());
-        int count = 0;
-        for (String url : urls) {
-            if(brokenLinkPage.isBrokenLink(url)) {
-                System.out.println(url);
-                count ++;
+        List<String> brokenLinkFound = new ArrayList<>();
+
+        for(int i = 0; i < urls.size(); i++) {
+            String currentUrls = urls.get(i);
+            if(brokenLinkPage.isBrokenLink(currentUrls)) {
+                brokenLinkFound.add(currentUrls);
             }
+        }
+        for(int i = 0;i< brokenLinkFound.size(); i++){
+            System.out.println(brokenLinkFound.get(i));
         }
     }
 }
