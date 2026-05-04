@@ -14,5 +14,8 @@ public class URLs {
             "https://www.dezlearn.com/nested-iframes-example/";
 
     public static final String TOOLTIP =
-            "https://www.tutorialspoint.com/selenium/practice/tool-tips.php";
+            "https://practice.expandtesting.com/tooltips";
+
+    public static final String Expand_Testing_Home =
+            "https://practice.expandtesting.com/";
 }

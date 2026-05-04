@@ -2,6 +2,7 @@ package tests;
 
 import constants.URLs;
 import org.example.base.BaseTest;
+import org.example.pages.ExpandTestingNavigationPage;
 import org.example.pages.NavigationPage;
 import org.example.pages.TooltipPage;
 import org.testng.Assert;
@@ -13,41 +14,34 @@ public class TooltipTest extends BaseTest {
 
     @BeforeMethod
     public void setupTest() {
-        page.navigate(URLs.Home_Page);
-        NavigationPage navigationPage = new NavigationPage(page);
-        navigationPage.navigateTo("Widgets", "Tool Tips");
+        page.navigate(URLs.Expand_Testing_Home);
+        new ExpandTestingNavigationPage(page).navigateTo("Tooltips");
         tooltipPage = new TooltipPage(page);
     }
 
     @Test
-    public void TC01_hoverTooltipOnTop() {
-        String buttonName = "Tooltip on top";
-        tooltipPage.hoverOnButton(buttonName);
-        String actualTooltip = tooltipPage.getTooltipTitle(buttonName);
-        Assert.assertEquals(actualTooltip, "Tooltip on top");
+    public void TC01_verifyTopToolTip(){
+        String actualText = tooltipPage.hoverAndGetToolTip("Tooltip on top");
+        Assert.assertEquals(actualText,"Tooltip on top");
     }
-
     @Test
-    public void TC02_hoverTooltipOnRight() {
-        String buttonName = "Tooltip on right";
-        tooltipPage.hoverOnButton(buttonName);
-        String actualTooltip = tooltipPage.getTooltipTitle(buttonName);
-        Assert.assertEquals(actualTooltip, "Tooltip on right");
+    public void TC02_verifyEndToolTip(){
+        String actualText = tooltipPage.hoverAndGetToolTip("Tooltip on end");
+        Assert.assertEquals(actualText,"Tooltip on end");
     }
-
     @Test
-    public void TC03_hoverTooltipOnBottom() {
-        String buttonName = "Tooltip on bottom";
-        tooltipPage.hoverOnButton(buttonName);
-        String actualTooltip = tooltipPage.getTooltipTitle(buttonName);
-        Assert.assertEquals(actualTooltip, "Tooltip on bottom");
+    public void TC03_verifyBottomToolTip(){
+        String actualText = tooltipPage.hoverAndGetToolTip("Tooltip on bottom");
+        Assert.assertEquals(actualText,"Tooltip on bottom");
     }
-
     @Test
-    public void TC04_hoverTooltipOnLeft() {
-        String buttonName = "Tooltip on left";
-        tooltipPage.hoverOnButton(buttonName);
-        String actualTooltip = tooltipPage.getTooltipTitle(buttonName);
-        Assert.assertEquals(actualTooltip, "Tooltip on left");
+    public void TC04_verifyStartToolTip(){
+        String actualText = tooltipPage.hoverAndGetToolTip("Tooltip on start");
+        Assert.assertEquals(actualText,"Tooltip on start");
+    }
+    @Test
+    public void TC05_verifyHTMLToolTip(){
+        String actualText = tooltipPage.hoverAndGetToolTip("Tooltip with HTML");
+        Assert.assertEquals(actualText,"Tooltip with HTML");
     }
 }

@@ -6,18 +6,15 @@ public class TooltipPage {
     private final Page page;
 
     private static final String Btn_tooltip = "//button[normalize-space(text())='%s']";
+    private static final String Tooltip_content = "//div[@class='tooltip-inner']";
 
     public TooltipPage(Page page){
         this.page =page;
     }
 
-    public String getTooltipTitle(String buttonText) {
-        String xpath = String.format(Btn_tooltip, buttonText);
-        return page.getAttribute(xpath, "title");
-    }
-
-    public void hoverOnButton(String buttonText) {
-        String xpath = String.format(Btn_tooltip, buttonText);
-        page.hover(xpath);
+    public String hoverAndGetToolTip(String buttonText) {
+        page.locator(String.format(Btn_tooltip, buttonText)).hover();
+        page.locator(Tooltip_content).waitFor();
+        return page.locator(Tooltip_content).innerText();
     }
 }
