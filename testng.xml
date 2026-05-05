@@ -24,4 +24,18 @@
             <class name="tests.DragAndDropTest"/>
         </classes>
     </test>
+    <test name="Broken Link Tests">
+        <classes>
+            <class name="tests.BrokenLinkTest"/>
+        </classes>
+    </test>
+    <test name="Upload Download Test">
+        <classes>
+            <class name="tests.UploadDownloadTest"/>
+    <test name="ToolTip Tests">
+        <classes>
+            <class name="tests.TooltipTest"/>
+        </classes>
+    </test>
+
 </suite>
