@@ -19,6 +19,9 @@
         </classes>
     </test>
 
+    <test name="Basic Auth Tests">
+        <classes>
+            <class name="tests.BasicAuthTest"/>
     <test name="Login Test">
         <classes>
             <class name="tests.LoginTest"/>
