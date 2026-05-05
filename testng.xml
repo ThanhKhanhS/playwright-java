@@ -19,6 +19,9 @@
         </classes>
     </test>
 
+    <test name="Login Test">
+        <classes>
+            <class name="tests.LoginTest"/>
     <test name="Drag And Drop Tests">
         <classes>
             <class name="tests.DragAndDropTest"/>

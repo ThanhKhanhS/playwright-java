@@ -14,5 +14,6 @@ public class ExpandTestingNavigationPage {
 
     public void navigateTo(String cardTitle){
         page.locator(String.format(Link_By_Text, cardTitle)).click();
+        page.waitForLoadState();
     }
 }
