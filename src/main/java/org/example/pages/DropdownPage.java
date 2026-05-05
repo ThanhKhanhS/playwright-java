@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.SelectOption;
 
@@ -8,7 +9,7 @@ import java.util.List;
 public class DropdownPage {
     private final Page page;
 
-    private static final String Multi_select = "//h6[normalize-space()='%s']/following-sibling::div//input";
+    private static final String Multi_select = "//h6[normalize-space()='%s']/following-sibling::div/div";
     private static final String Item_select  = "//div[@role='option' and normalize-space(.)='%s']";
 
     private static final String Select_one   = "//h6[normalize-space()='%s']/following-sibling::div/select";
@@ -18,15 +19,13 @@ public class DropdownPage {
     }
 
     public void selectMultipleOptions(String selectLabel, List<String> values) {
-        page.click(String.format(Multi_select,selectLabel), new Page.ClickOptions().setForce(true));
-
+        Locator dropdown = page.locator(String.format(Multi_select,selectLabel));
+        dropdown.click();
         for(String value : values) {
             String item = String.format(Item_select,value);
             page.locator(item).click();
         }
-
-        page.click(String.format(Multi_select,selectLabel), new Page.ClickOptions().setForce(true));
-        page.waitForTimeout(5_000);
+        page.keyboard().press("Escape");
     }
 
     public void selectOneOption(String id, String label) {

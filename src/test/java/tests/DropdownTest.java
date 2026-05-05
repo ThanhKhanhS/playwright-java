@@ -1,5 +1,7 @@
 package tests;
 
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitUntilState;
 import constants.URLs;
 import org.example.base.BaseTest;
 import org.example.pages.DropdownPage;
@@ -16,7 +18,7 @@ public class DropdownTest extends BaseTest {
 
     @Test
     public void TC01_selectMultipleOptions(){
-        page.navigate(URLs.Home_Page);
+        page.navigate(URLs.Home_Page, new Page.NavigateOptions().setWaitUntil(WaitUntilState.DOMCONTENTLOADED));
         NavigationPage navigationPage = new NavigationPage(page);
         navigationPage.navigateTo("Widgets", "Select Menu");
 
@@ -28,7 +30,7 @@ public class DropdownTest extends BaseTest {
 
     @Test
     public void TC02_selectSelectOne(){
-        page.navigate(URLs.Home_Page);
+        page.navigate(URLs.Home_Page,new Page.NavigateOptions().setWaitUntil(WaitUntilState.DOMCONTENTLOADED));
         NavigationPage navigationPage = new NavigationPage(page);
         navigationPage.navigateTo("Widgets", "Select Menu");
 
