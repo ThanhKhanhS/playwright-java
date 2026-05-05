@@ -13,6 +13,8 @@ public class URLs {
     public static final String NESTED_FRAME =
             "https://www.dezlearn.com/nested-iframes-example/";
 
+    public static final String UploadDownload =
+            "https://www.tutorialspoint.com/selenium/practice/upload-download.php";
     public static final String TOOLTIP =
             "https://practice.expandtesting.com/tooltips";
 
