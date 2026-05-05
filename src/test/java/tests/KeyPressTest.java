@@ -14,6 +14,15 @@ public class KeyPressTest extends BaseTest {
 
     @Test
     public void TC01_pressKeyAndVerifyResult(){
+        page.route("**/*", route -> {
+            String url = route.request().url();
+            if (url.contains("googleads") || url.contains("doubleclick") || url.contains("adsbygoogle") || url.contains("analytics")) {
+                route.abort();
+            } else {
+                route.resume();
+            }
+        });
+
         page.navigate(URLs.Expand_Testing_Home);
         new ExpandTestingNavigationPage(page).navigateTo("Key Presses");
 
@@ -24,6 +33,7 @@ public class KeyPressTest extends BaseTest {
         testData.put("b", "You entered: B");
         testData.put("Tab", "You entered: TAB");
         testData.put("Escape", "You entered: ESCAPE");
+        testData.put("Backspace", "You entered: BACK_SPACE");
 
         for (Map.Entry<String, String> entry : testData.entrySet()) {
             String key = entry.getKey();
