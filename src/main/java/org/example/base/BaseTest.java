@@ -21,7 +21,7 @@ public class BaseTest {
 
     @AfterMethod
     public void teardown() {
-        page.close(); // Close page first
+        page.close();
         context.close();
         browser.close();
         playwright.close();
