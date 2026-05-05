@@ -11,7 +11,7 @@ public class ColorPage {
         this.page = page;
     }
 
-    private String BtnXpath(String btnText){
+    private String btnXpath(String btnText){
         return String.format(BTN, btnText);
     }
 
@@ -20,11 +20,11 @@ public class ColorPage {
     }
 
     public String getButtonColor(String btnText){
-        return getCssProperty(BtnXpath(btnText),"background-color");
+        return getCssProperty(btnXpath(btnText),"background-color");
     }
 
     public String getButtonColorOnHover(String btnText) {
-        String xpath = BtnXpath(btnText);
+        String xpath = btnXpath(btnText);
         page.locator(xpath).hover();
         page.waitForTimeout(500);
         return getCssProperty(xpath, "background-color");
