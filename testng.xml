@@ -19,6 +19,11 @@
         </classes>
     </test>
 
+    <test name="Drag And Drop Tests">
+        <classes>
+            <class name="tests.DragAndDropTest"/>
+        </classes>
+    </test>
     <test name="Broken Link Tests">
         <classes>
             <class name="tests.BrokenLinkTest"/>
