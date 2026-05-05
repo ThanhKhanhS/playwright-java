@@ -22,6 +22,9 @@
     <test name="Upload Download Test">
         <classes>
             <class name="tests.UploadDownloadTest"/>
+    <test name="ToolTip Tests">
+        <classes>
+            <class name="tests.TooltipTest"/>
         </classes>
     </test>
 
