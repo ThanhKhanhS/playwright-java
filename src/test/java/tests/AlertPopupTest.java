@@ -23,19 +23,19 @@ public class AlertPopupTest extends BaseTest {
             Assert.assertEquals(dialog.message(), "I am an alert box!");
             dialog.accept();
         });
-        alertPage.triggerAlert("alertBtn");
+        alertPage.triggerAlert("Simple Alert");
 
         page.onceDialog(dialog -> {
             Assert.assertEquals(dialog.message(), "Press a button!");
             dialog.dismiss();
         });
-        alertPage.triggerAlert("confirmBtn");
+        alertPage.triggerAlert("Confirmation Alert");
 
         page.onceDialog(dialog -> {
             Assert.assertEquals(dialog.message(), "Please enter your name:");
             dialog.accept("Khanh");
         });
-        alertPage.triggerAlert("promptBtn");
+        alertPage.triggerAlert("Prompt Alert");
     }
 
     @Test

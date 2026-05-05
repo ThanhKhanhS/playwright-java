@@ -5,15 +5,15 @@ import com.microsoft.playwright.Page;
 public class AlertPopupPage {
     private final Page page;
 
-    private static final String Alert_btn  = "//button[@id='%s']";
+    private static final String Alert_btn  = "//button[text()='%s']";
     private static final String OPEN_NEW_WINDOWS_BTN = "//button[text()='%s']";
 
     public AlertPopupPage(Page page) {
         this.page = page;
     }
 
-    public void triggerAlert(String buttonId) {
-        String xpath = String.format(Alert_btn, buttonId);
+    public void triggerAlert(String buttonName) {
+        String xpath = String.format(Alert_btn, buttonName);
         page.click(xpath);
     }
 
