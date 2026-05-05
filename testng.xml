@@ -18,5 +18,9 @@
             <class name="tests.NestedFrameTest"/>
         </classes>
     </test>
-
+    <test name="Screenshot Tests">
+        <classes>
+            <class name="tests.ScreenshotTest"/>
+        </classes>
+    </test>
 </suite>
