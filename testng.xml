@@ -19,6 +19,11 @@
         </classes>
     </test>
 
+    <test name="Broken Link Tests">
+        <classes>
+            <class name="tests.BrokenLinkTest"/>
+        </classes>
+    </test>
     <test name="Upload Download Test">
         <classes>
             <class name="tests.UploadDownloadTest"/>
