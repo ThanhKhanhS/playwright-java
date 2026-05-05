@@ -24,9 +24,16 @@
             <class name="tests.KeyPressTest"/>
         </classes>
     </test>
+    <test name="Basic Auth Tests">
+        <classes>
+            <class name="tests.BasicAuthTest"/>
+        </classes>
+    </test>
     <test name="Login Test">
         <classes>
             <class name="tests.LoginTest"/>
+        </classes>
+    </test>
     <test name="Drag And Drop Tests">
         <classes>
             <class name="tests.DragAndDropTest"/>
@@ -40,6 +47,8 @@
     <test name="Upload Download Test">
         <classes>
             <class name="tests.UploadDownloadTest"/>
+        </classes>
+    </test>
     <test name="ToolTip Tests">
         <classes>
             <class name="tests.TooltipTest"/>
