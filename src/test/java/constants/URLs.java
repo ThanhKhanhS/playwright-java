@@ -14,6 +14,10 @@ public class URLs {
             "https://www.dezlearn.com/nested-iframes-example/";
 
     public static final String Color =
+      "https://testautomationpractice.blogspot.com/";
+    public static final String DROPDOWN =
+            "https://www.tutorialspoint.com/selenium/practice/select-menu.php";
+    public static final String ALERTPOPUP =
             "https://testautomationpractice.blogspot.com/";
     public static final String BASIC_AUTH =
             "https://practice.expandtesting.com/basic-auth";
