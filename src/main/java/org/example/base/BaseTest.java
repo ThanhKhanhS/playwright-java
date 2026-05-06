@@ -2,6 +2,8 @@ package org.example.base;
 
 import com.microsoft.playwright.*;
 import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
     protected Playwright playwright;
@@ -13,12 +15,13 @@ public class BaseTest {
     public void setup() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        context = browser.newContext(new Browser.NewContextOptions().setIgnoreHTTPSErrors(true));
+        context = browser.newContext();
         page = context.newPage();
     }
 
     @AfterMethod
     public void teardown() {
+        page.close();
         context.close();
         browser.close();
         playwright.close();

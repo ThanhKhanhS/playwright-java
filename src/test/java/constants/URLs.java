@@ -13,6 +13,34 @@ public class URLs {
     public static final String NESTED_FRAME =
             "https://www.dezlearn.com/nested-iframes-example/";
 
-    public static final String DummySite_Home =
-            "https://thedummysite.com/";
+    public static final String Key_Press =
+            "https://practice.expandtesting.com/key-presses";
+    public static final String Color =
+      "https://testautomationpractice.blogspot.com/";
+    public static final String DROPDOWN =
+            "https://www.tutorialspoint.com/selenium/practice/select-menu.php";
+    public static final String ALERTPOPUP =
+            "https://testautomationpractice.blogspot.com/";
+    public static final String BASIC_AUTH =
+            "https://practice.expandtesting.com/basic-auth";
+
+    public static final String LOGIN =
+            "https://practice.expandtesting.com/login";
+
+    public static final String DRAGANDDROP =
+            "https://testautomationpractice.blogspot.com/";
+
+    public static final String BROKEN =
+            "https://testautomationpractice.blogspot.com/";
+
+    public static final String UploadDownload =
+            "https://www.tutorialspoint.com/selenium/practice/upload-download.php";
+    public static final String TOOLTIP =
+            "https://practice.expandtesting.com/tooltips";
+
+    public static final String Expand_Testing_Home =
+            "https://practice.expandtesting.com/";
+
+    public static final String PracticeTest_Home =
+            "https://practicetestautomation.com/practice-test-login/";
 }
