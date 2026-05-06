@@ -24,6 +24,21 @@
             <class name="tests.KeyPressTest"/>
         </classes>
     </test>
+    <test name="Get Color Tests">
+        <classes>
+            <class name="tests.ColorTest"/>
+        </classes>
+    </test>
+    <test name="DropDown Tests">
+        <classes>
+            <class name="tests.DropdownTest"/>
+        </classes>
+    </test>
+    <test name="Alerts Popup Tests">
+        <classes>
+            <class name="tests.AlertPopupTest"/>
+        </classes>
+    </test>
     <test name="Basic Auth Tests">
         <classes>
             <class name="tests.BasicAuthTest"/>
