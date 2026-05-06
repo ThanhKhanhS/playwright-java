@@ -19,6 +19,11 @@
         </classes>
     </test>
 
+    <test name="DropDown Tests">
+        <classes>
+            <class name="tests.DropdownTest"/>
+        </classes>
+    </test>
     <test name="Alerts Popup Tests">
         <classes>
             <class name="tests.AlertPopupTest"/>
