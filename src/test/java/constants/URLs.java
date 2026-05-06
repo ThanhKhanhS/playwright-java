@@ -13,6 +13,8 @@ public class URLs {
     public static final String NESTED_FRAME =
             "https://www.dezlearn.com/nested-iframes-example/";
 
+    public static final String Key_Press =
+            "https://practice.expandtesting.com/key-presses";
     public static final String Color =
       "https://testautomationpractice.blogspot.com/";
     public static final String DROPDOWN =
@@ -21,8 +23,6 @@ public class URLs {
             "https://testautomationpractice.blogspot.com/";
     public static final String BASIC_AUTH =
             "https://practice.expandtesting.com/basic-auth";
-    public static final String Expand_Testing_Home =
-            "https://practice.expandtesting.com/";
 
     public static final String LOGIN =
             "https://practice.expandtesting.com/login";
