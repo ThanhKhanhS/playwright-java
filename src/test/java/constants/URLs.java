@@ -13,6 +13,8 @@ public class URLs {
     public static final String NESTED_FRAME =
             "https://www.dezlearn.com/nested-iframes-example/";
 
+    public static final String ALERTPOPUP =
+            "https://testautomationpractice.blogspot.com/";
     public static final String BASIC_AUTH =
             "https://practice.expandtesting.com/basic-auth";
     public static final String Expand_Testing_Home =
