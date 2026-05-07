@@ -42,5 +42,5 @@ public class URLs {
             "https://practice.expandtesting.com/";
 
     public static final String PracticeTest_Home =
-            "https://practicetestautomation.com/practice-test-login/";
+            "https://practice.qabrains.com/";
 }

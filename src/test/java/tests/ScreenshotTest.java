@@ -2,6 +2,7 @@ package tests;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.LoadState;
 import constants.URLs;
 import org.example.base.BaseTest;
 import org.example.pages.LoginScreenShotPage;
@@ -10,13 +11,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
-import java.nio.file.Paths;
 
 public class ScreenshotTest extends BaseTest {
 
-    private static final String Valid_Username = "student";
+    private static final String Valid_Email = "qa_testers@qabrains.com";
     private static final String Valid_Password = "Password123";
-    private static final String Screenshot_Dir = System.getProperty("user.dir") + File.separator + "src/test/java/resources/screenshot";
     private LoginScreenShotPage loginPage;
     @BeforeMethod
         public void setupTest(){
@@ -25,33 +24,38 @@ public class ScreenshotTest extends BaseTest {
     }
     @Test
     public void TC01_screenshotLoginPage(){
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,"TC01_login_page.png")).setFullPage(true));
+       captureScreenshot(1);
     }
     @Test
     public void TC02_screenshotLoginFailed(){
-        loginPage.login("sdxasx", "ikmujn");
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,"TC02_login_failed.png")));
+        loginPage.login("sdxasx@gmail.com", "ikmujn");
+        captureScreenshot(2);
         Assert.assertFalse(loginPage.isLoginSuccess());
-        Assert.assertEquals(loginPage.getErrorMsg(),"Your username is invalid!");
+        Assert.assertEquals(loginPage.getErrorMsg(),"Your email and password both are invalid!");
     }
     @Test
     public void TC03_screenshotLoginSuccess(){
-        loginPage.login(Valid_Username,Valid_Password);
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,"TC03_login_success.png")));
+        loginPage.login(Valid_Email,Valid_Password);
+        captureScreenshot(3);
         Assert.assertTrue(loginPage.isLoginSuccess());
     }
     @Test
     public void TC04_screenshotLoginFailedWithWrongPassword(){
-        loginPage.login(Valid_Username,"zxcvbnm");
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,"TC04_login_failed_wrongpassword.png")));
+        loginPage.login(Valid_Email,"zxcvbnm");
+        captureScreenshot(4);
         Assert.assertEquals(loginPage.getErrorMsg(),"Your password is invalid!");
     }
     @Test
     public void TC05_screenshotElementErrorMsg(){
-        loginPage.login("ikmnju","yuiohjk");
+        loginPage.login("ikmnju@gmail.com","yuiohjk");
         Locator errorMsg = loginPage.getErrorLocator();
         errorMsg.waitFor();
-        errorMsg.screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,"TC05_error_element.png")));
+        captureScreenshot(5,errorMsg);
+    }
+    @Test
+    public void TC06_screenshotWithEmptyCred(){
+        loginPage.clickLogin();
+        captureScreenshot(6);
     }
 }
 

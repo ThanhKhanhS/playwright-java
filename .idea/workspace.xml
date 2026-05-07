@@ -4,62 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa9da94e-9303-4296-a628-01c93b5e4259" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/AlertPopupPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/BasicAuthPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/BrokenLinkPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/ColorPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/DragAndDropPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/DropdownPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/ExpandTestingNavigationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/KeyPressPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/TooltipPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/UploadDownloadPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/download/sampleFile.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AlertPopupTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BasicAuthTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BrokenLinkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ColorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DragAndDropTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DropdownTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/KeyPressTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TooltipTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UploadDownloadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="5896113c-23a9-4ffa-b56c-9388a9e2d289" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/DummySiteLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/LoginScreenShotPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/LoginScreenShotPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/LoginScreenShotPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/constants/URLs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/constants/URLs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/testdata/screenshot/TC01_login_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/testdata/screenshot/TC02_login_failed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/testdata/screenshot/TC03_login_success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC01_login_page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC02_login_failed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC03_login_success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC04_login_failed_wrongpassword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC05_error_element.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/ScreenshotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ScreenshotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="3CRUw27E8q7eflRd2pHi1R3EweL" />
+  <component name="ProjectId" id="3DNM5cucRiuhYj9nvf45eB8W9cm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -70,96 +38,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "TestNG.AlertPopupTest.executor": "Run",
-    "TestNG.BasicAuthTest.executor": "Run",
-    "TestNG.BrokenLinkTest.executor": "Run",
-    "TestNG.C:/Users/khanh/IdeaProjects/Practice/testng.xml.executor": "Run",
-    "TestNG.ColorTest.executor": "Run",
-    "TestNG.DragAndDropTest.executor": "Run",
-    "TestNG.DropdownTest.executor": "Run",
-    "TestNG.FormTest.executor": "Run",
-    "TestNG.FrameTest.executor": "Run",
-    "TestNG.KeyPressTest.executor": "Run",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.NestedFrameTest.TC01_clickHereInParentFrameAndVerifyText.executor": "Debug",
-    "TestNG.NestedFrameTest.executor": "Run",
-    "TestNG.Nestedframetest.executor": "Run",
+    "TestNG.ScreenshotTest.TC03_screenshotLoginSuccess.executor": "Debug",
     "TestNG.ScreenshotTest.executor": "Run",
-    "TestNG.TooltipTest.executor": "Run",
-    "TestNG.UploadDownloadTest.executor": "Run",
-    "git-widget-placeholder": "Merging feature/screenshot-test",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/khanh/IdeaProjects/Practice/src/main/java/org/example/Main.java"
+    "git-widget-placeholder": "feature/screenshot-test",
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\khanh\IdeaProjects\Practice\src\test\java\resources\testdata" />
-      <recent name="C:\Users\khanh\IdeaProjects\Practice\src\test\java\data" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.C:/Users/khanh/IdeaProjects/Practice/testng.xml">
-    <configuration name="C:/Users/khanh/IdeaProjects/Practice/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="PracticePlaywright" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ColorTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="PracticePlaywright" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ColorTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KeyPressTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="PracticePlaywright" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.KeyPressTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="PracticePlaywright" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ScreenshotTest">
     <configuration name="ScreenshotTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PracticePlaywright" />
       <extension name="coverage">
@@ -177,35 +62,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScreenshotTest.TC03_screenshotLoginSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PracticePlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ScreenshotTest" />
+      <option name="METHOD_NAME" value="TC03_screenshotLoginSuccess" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/khanh/IdeaProjects/Practice/testng.xml" />
         <item itemvalue="TestNG.ScreenshotTest" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.KeyPressTest" />
-        <item itemvalue="TestNG.ColorTest" />
+        <item itemvalue="TestNG.ScreenshotTest.TC03_screenshotLoginSuccess" />
       </list>
     </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa9da94e-9303-4296-a628-01c93b5e4259" name="Changes" comment="" />
-      <created>1776348111531</created>
+      <changelist id="5896113c-23a9-4ffa-b56c-9388a9e2d289" name="Changes" comment="" />
+      <created>1778117894651</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1776348111531</updated>
+      <updated>1778117894651</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
