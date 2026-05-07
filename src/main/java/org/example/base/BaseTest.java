@@ -17,6 +17,7 @@ public class BaseTest {
     protected BrowserContext context;
     protected Page page;
     private static final String Screenshot_Dir = System.getProperty("user.dir") + File.separator + "src/test/java/resources/screenshot";
+    private static int index = 0;
     @BeforeMethod
     public void setup() {
         playwright = Playwright.create();
@@ -36,14 +37,22 @@ public class BaseTest {
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
         return String.format("%02d_%s_.png",index,timestamp);
     }
-    protected void captureScreenshot(int index){
+    protected void captureScreenshot(){
+        index ++;
+        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))).setFullPage(true));
+    }
+    protected void captureScreenshotElement(Locator locator){
+        index ++;
+        locator.waitFor();
+        locator.screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))));
+    }
+    protected void captureScreenshotViewPort(){
+        index ++;
+        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))).setFullPage(false));
+    }
+    protected void waitForPage(){
         page.waitForLoadState(LoadState.DOMCONTENTLOADED);
         page.waitForLoadState(LoadState.NETWORKIDLE);
         page.waitForTimeout(5_000);
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))).setFullPage(true));
-    }
-    protected void captureScreenshot(int index, Locator locator){
-        locator.waitFor();
-        locator.screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))));
     }
 }

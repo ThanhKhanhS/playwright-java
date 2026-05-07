@@ -7,13 +7,12 @@
     <list default="true" id="5896113c-23a9-4ffa-b56c-9388a9e2d289" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/LoginScreenShotPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/LoginScreenShotPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/constants/URLs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/constants/URLs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC01_login_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC02_login_failed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC03_login_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC04_login_failed_wrongpassword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/TC05_error_element.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/01_20260507_145745_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/02_20260507_145756_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/03_20260507_145837_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/04_20260507_145847_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/05_20260507_145853_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/06_20260507_145903_.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/ScreenshotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ScreenshotTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
