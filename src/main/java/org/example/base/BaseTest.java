@@ -37,7 +37,7 @@ public class BaseTest {
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
         return String.format("%02d_%s_.png",index,timestamp);
     }
-    protected void captureScreenshot(){
+    protected void captureScreenshotFullPage(){
         index ++;
         page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))).setFullPage(true));
     }
@@ -46,9 +46,9 @@ public class BaseTest {
         locator.waitFor();
         locator.screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))));
     }
-    protected void captureScreenshotViewPort(){
+    protected void captureScreenshot(){
         index ++;
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))).setFullPage(false));
+        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(Screenshot_Dir,buildFileName(index))));
     }
     protected void waitForPage(){
         page.waitForLoadState(LoadState.DOMCONTENTLOADED);

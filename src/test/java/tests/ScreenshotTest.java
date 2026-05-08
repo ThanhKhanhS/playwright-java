@@ -24,13 +24,13 @@ public class ScreenshotTest extends BaseTest {
     }
     @Test
     public void TC01_screenshotLoginPage(){
-       captureScreenshot();
+       captureScreenshotFullPage();
     }
     @Test
     public void TC02_screenshotLoginFailed(){
         loginPage.login("sdxasx@gmail.com", "ikmujn");
         waitForPage();
-        captureScreenshot();
+        captureScreenshotFullPage();
         Assert.assertFalse(loginPage.isLoginSuccess());
         Assert.assertEquals(loginPage.getErrorMsg(),"Your email and password both are invalid!");
     }
@@ -38,14 +38,14 @@ public class ScreenshotTest extends BaseTest {
     public void TC03_screenshotLoginSuccess(){
         loginPage.login(Valid_Email,Valid_Password);
         waitForPage();
-        captureScreenshot();
+        captureScreenshotFullPage();
         Assert.assertTrue(loginPage.isLoginSuccess());
     }
     @Test
     public void TC04_screenshotLoginFailedWithWrongPassword(){
         loginPage.login(Valid_Email,"zxcvbnm");
         waitForPage();
-        captureScreenshot();
+        captureScreenshotFullPage();
         Assert.assertEquals(loginPage.getErrorMsg(),"Your password is invalid!");
     }
     @Test
@@ -58,11 +58,11 @@ public class ScreenshotTest extends BaseTest {
     @Test
     public void TC06_screenshotWithEmptyCred(){
         loginPage.clickLogin();
-        captureScreenshot();
+        captureScreenshotFullPage();
     }
     @Test
     public void TC07_screenshotViewPort(){
-        captureScreenshotViewPort();
+        captureScreenshot();
     }
 }
 
