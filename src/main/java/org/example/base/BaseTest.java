@@ -35,7 +35,7 @@ public class BaseTest {
     }
     private String buildFileName(int index){
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        return String.format("%02d_%s_.png",index,timestamp);
+        return String.format("%02d_%s.png",index,timestamp);
     }
     protected void captureScreenshotFullPage(){
         index ++;
