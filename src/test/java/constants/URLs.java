@@ -40,4 +40,7 @@ public class URLs {
 
     public static final String Expand_Testing_Home =
             "https://practice.expandtesting.com/";
+
+    public static final String PracticeTest_Home =
+            "https://practice.qabrains.com/";
 }

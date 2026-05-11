@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5896113c-23a9-4ffa-b56c-9388a9e2d289" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/01_20260507_145745_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/02_20260507_145756_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/03_20260507_145837_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/04_20260507_145847_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/05_20260507_145853_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/screenshot/06_20260507_145903_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ScreenshotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ScreenshotTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3DNM5cucRiuhYj9nvf45eB8W9cm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.ScreenshotTest.TC03_screenshotLoginSuccess.executor": "Debug",
+    "TestNG.ScreenshotTest.executor": "Run",
+    "git-widget-placeholder": "feature/screenshot-test",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="TestNG.ScreenshotTest">
+    <configuration name="ScreenshotTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PracticePlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ScreenshotTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScreenshotTest.TC03_screenshotLoginSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PracticePlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ScreenshotTest" />
+      <option name="METHOD_NAME" value="TC03_screenshotLoginSuccess" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ScreenshotTest" />
+        <item itemvalue="TestNG.ScreenshotTest.TC03_screenshotLoginSuccess" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5896113c-23a9-4ffa-b56c-9388a9e2d289" name="Changes" comment="" />
+      <created>1778117894651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778117894651</updated>
+    </task>
+    <servers />
+  </component>
+</project>
